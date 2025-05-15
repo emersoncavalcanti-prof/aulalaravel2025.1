@@ -10,3 +10,7 @@ Route::get('/produto', function () {
     return view('produto');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
