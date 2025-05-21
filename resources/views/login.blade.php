@@ -16,18 +16,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h3 class="card-title text-center mb-4">Login</h3>
-
-                        <!-- Exibir mensagens de erro -->
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-
+        
                         <!-- Formulário de login -->
                         <form method="POST" action="/login">
                             @csrf

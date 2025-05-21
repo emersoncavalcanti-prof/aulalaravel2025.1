@@ -2,6 +2,6 @@
 
 @section('content')
 
-meus produtos
+meus clientes
 
 @endsection
