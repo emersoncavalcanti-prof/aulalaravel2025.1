@@ -26,9 +26,6 @@
                             </div>
                         </form>
 
-                        <div class="mt-3 text-center">
-                            <a href="" class="text-danger text-decoration-none">Esqueceu sua senha?</a>
-                        </div>
                     </div>
                 </div>
             </div>
