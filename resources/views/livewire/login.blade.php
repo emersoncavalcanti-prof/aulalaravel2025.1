@@ -5,24 +5,32 @@
                         <h3 class="card-title text-center mb-4">Login</h3>
         
                         <!-- Formulário de login -->
-                        <form method="POST" action="/login">
+                        <form wire:submit="login">
                             @csrf
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">E-mail</label>
-                                <input type="email" name="email" class="form-control" id="email" required autofocus>
+                                <input type="email" wire:model="email" name="email" class="form-control" id="email" autofocus>
+                                @error('email') <span class="text text-danger">{{$message}}</span>@enderror
                             </div>
 
                             <div class="mb-3">
                                 <label for="password" class="form-label">Senha</label>
-                                <input type="password" name="password" class="form-control" id="password" required>
+                                <input type="password" wire:model="password" name="password" class="form-control" id="password">
+                                @error('password') <span class="text text-danger">{{$message}}</span>@enderror
+                            </div>
+
+                            <div class="text-center mb-2">
+                                @if(session()->has('error'))
+                                <span class="text text-danger">{{session()->get('error')}}</span>
+                                @endif
                             </div>
 
                             <div class="d-grid">
-                                <a class="btn btn-success mb-1" href="{{route('cadastro')}}">Cadastre-se</a>
+                                <button type="submit" class="btn btn-primary mb-1">Entrar</button>
                             </div>
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Entrar</button>
+                                <a class="btn btn-success" href="{{route('cadastro')}}">Cadastre-se</a>
                             </div>
                         </form>
 

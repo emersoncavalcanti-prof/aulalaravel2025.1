@@ -19,3 +19,8 @@ Route::get('/cadastro', function () {
 })->name('cadastro');
 
 
+Route::get('/painel', function () {
+    return view('painel');
+})->name('painel');
+
+
