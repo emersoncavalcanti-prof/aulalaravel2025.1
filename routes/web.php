@@ -19,8 +19,10 @@ Route::get('/cadastro', function () {
 })->name('cadastro');
 
 
-Route::get('/painel', function () {
-    return view('painel');
-})->name('painel');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard')->middleware('auth');
 
-
+Route::fallback(function(){
+    return redirect()->route('login');
+});

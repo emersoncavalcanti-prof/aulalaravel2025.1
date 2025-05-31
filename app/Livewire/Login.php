@@ -23,10 +23,10 @@ class Login extends Component
             return session()->flash('error','Login ou senha inválidos');
         }
 
-        $this->redirect('/painel');
+        $this->redirect('/dashboard');
 
     }
-
+    
     public function render()
     {
         return view('livewire.login');
