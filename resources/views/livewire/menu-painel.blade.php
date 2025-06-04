@@ -27,7 +27,7 @@
   <div class="offcanvas-body">
 
       <ul class="">
-        <li class="list-group-item"><a href="#" class="text text-secondary text-decoration-none"><i class="bi bi-person"></i> Cadastro de Alunos</li></a>
+        <li class="list-group-item"><a href="{{route('alunos')}}" class="text text-secondary text-decoration-none"><i class="bi bi-person"></i> Cadastro de Alunos</li></a>
       </ul>
 
   </div>

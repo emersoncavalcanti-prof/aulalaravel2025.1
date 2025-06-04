@@ -10,13 +10,13 @@
 
                             <div class="mb-3">
                                 <label for="email" class="form-label">E-mail</label>
-                                <input type="email" wire:model="email" name="email" class="form-control" id="email" autofocus>
+                                <input type="email" wire:model="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" autofocus>
                                 @error('email') <span class="text text-danger">{{$message}}</span>@enderror
                             </div>
 
                             <div class="mb-3">
                                 <label for="password" class="form-label">Senha</label>
-                                <input type="password" wire:model="password" name="password" class="form-control" id="password">
+                                <input type="password" wire:model="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
                                 @error('password') <span class="text text-danger">{{$message}}</span>@enderror
                             </div>
 
